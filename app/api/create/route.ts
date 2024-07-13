@@ -2,6 +2,7 @@ import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
  
 export async function GET(request: Request) {
+  console.log("hello")
   try {
     const result =
       await sql`CREATE TABLE Users ( email varchar(255), password varchar(255) );`;
