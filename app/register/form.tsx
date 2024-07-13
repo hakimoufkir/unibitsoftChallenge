@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent } from "react";
 
-export default function Form() {
+export default function From() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -17,6 +17,7 @@ export default function Form() {
     console.log({ response });
   };
   return (
+    <>
     <div className="flex items-center justify-center h-screen">
       <div className="w-full max-w-xs ">
         <form
@@ -32,8 +33,8 @@ export default function Form() {
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              name="password"
-              id="email"
+              name="email"
+              id="email2"
               type="text"
               placeholder="email"
             />
@@ -48,7 +49,7 @@ export default function Form() {
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 // className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
+              id="password2"
               type="password"
               name="password"
               placeholder="******************"
@@ -74,5 +75,6 @@ export default function Form() {
         </form>
       </div>
     </div>
+    </>
   );
 }

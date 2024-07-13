@@ -1,8 +1,25 @@
 import './globals.css'
+import { getServerSession } from "next-auth";
+import Main from './main/main';
+import RegisterPage from './register/page';
 
-export default function page() {
+export default async function page() {
+  const session = await getServerSession();
+
   return (
-    <div>page</div>
+    <div>
+      {!!session && <Main />}
+        {/* {!session && (
+            <>
+            <RegisterPage/>
+            </>
+            )} */}
+        {!session && (
+          <>
+            <RegisterPage />
+          </>
+        )}
+    </div>
   )
 }
 

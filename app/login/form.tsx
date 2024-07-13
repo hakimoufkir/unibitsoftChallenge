@@ -24,6 +24,7 @@ export default function Form() {
     }
   };
   return (
+    <>
     <div className="flex items-center justify-center h-screen">
       <div className="w-full max-w-xs ">
         <form
@@ -39,7 +40,7 @@ export default function Form() {
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              name="password"
+              name="email"
               id="email"
               type="text"
               placeholder="email"
@@ -81,5 +82,6 @@ export default function Form() {
         </form>
       </div>
     </div>
+    </>
   );
 }
